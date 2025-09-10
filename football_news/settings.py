@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'main'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    
+    "https://alya-nabilla-footballnews.pbp.cs.ui.ac.id"
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,7 +66,7 @@ ROOT_URLCONF = 'football_news.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # Direktori untuk template HTML 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

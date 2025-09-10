@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h1>Add News</h1>
+
+<form method="POST">
+  {% csrf_token %} {# untuk keamanan form agar tidak disalahgunakan #}
+  <table>
+    {{ form.as_table }} {# menampilkan form sebagai tabel #}
+    <tr>
+      <td></td>
+      <td>
+        <input type="submit" value="Add NEWS" />
+      </td>
+    </tr>
+  </table>
+</form>
+
+{% endblock %}
